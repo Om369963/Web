@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify My Crush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio autoplay style="display: none;">
+        <source src="Favourite_song1(2)" type="audio/mpeg">
+      </audio>
+    <h1><i>Verify My Crush</i></h1>
+    <form id="verification-form">
+        <label for="crush-name"><i>Enter My Crush's Name:</i></label>
+        <input type="text" id="crush-name" name="crush-name" required>
+        <button type="submit">Verify</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <PRE><h3><i> NOTE - NEXT PAGE VERY SPECIAL AFTER YOU CAN VERIFY NAME (NOTE- VERY VERY VERY SPECIAL SURPRISE EXIST NEXT PAGE, WHEN YOU VERIFY NAME)</i></h3></PRE>
+    <hr>
+    <script>
+        document.getElementById('verification-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const enteredName = document.getElementById('crush-name').value.trim();
+            const correctName = 'Srijan'; // Replace with the actual name
+            if (enteredName === correctName) {
+                window.location.href = 'content.html'; // Redirect to the content page
+            } else {
+                alert('Incorrect name. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
