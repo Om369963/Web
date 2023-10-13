@@ -143,14 +143,19 @@
     <footer class="footer">
         <p>&copy; 2023 Srijan Das</p>
     </footer>
-    <script>
+   <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const passwordInput = prompt("Please enter the password:");
-            if (passwordInput === "1234") {
-                
-                window.location.href = "verification.html";
-            }
+            const verificationLink = document.getElementById('verification-link');
+            verificationLink.addEventListener('click', function (event) {
+                event.preventDefault();
+                const passwordInput = prompt("Please enter the password:");
+                if (passwordInput === "1234") {
+                    window.location.href = "verification.html";
+                } else {
+                    alert("Incorrect Password");
+                }
+            });
         });
-    </script>
+   </script>
 </body>
 </html>
